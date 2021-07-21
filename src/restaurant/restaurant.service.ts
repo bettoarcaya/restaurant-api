@@ -27,11 +27,12 @@ export class RestaurantService {
         relations: ['comments'],
       },
     );
-
+    //const date =
     const newComment = new Comments();
     newComment.userName = comment.userName;
     newComment.userText = comment.userText;
     newComment.restaurant = restaurant;
+    newComment.date = new Date().toLocaleDateString('en-US');
 
     const commentRepository = getRepository(Comments);
 

@@ -12,6 +12,9 @@ export class Comments {
   @Column()
   userText: string;
 
+  @Column()
+  date: string;
+
   @ManyToOne(() => Restaurant, (restaurant) => restaurant.comments)
   restaurant: Restaurant;
 }
