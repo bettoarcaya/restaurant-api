@@ -15,17 +15,12 @@ export class RestaurantService {
   }
 
   getOne(id): any {
-    return this.restaurantRepository.findOne(id, {
-      relations: ['photos', 'comments'],
-    });
+    return this.restaurantRepository.findOne(id);
   }
 
   async createComment(comment) {
     const restaurant = await this.restaurantRepository.findOne(
       comment.restaurantId,
-      {
-        relations: ['comments'],
-      },
     );
     //const date =
     const newComment = new Comments();
