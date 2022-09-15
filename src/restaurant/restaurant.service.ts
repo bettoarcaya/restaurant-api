@@ -1,7 +1,7 @@
 import { Comments } from './entities/comments.entity';
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { getConnection, Repository, getRepository } from 'typeorm';
+import { Repository, getRepository } from 'typeorm';
 import { Restaurant } from './entities/restaurant.entity';
 
 @Injectable()
